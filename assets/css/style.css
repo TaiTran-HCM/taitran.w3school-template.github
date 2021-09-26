@@ -3,6 +3,7 @@ html, body{
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -18,17 +19,21 @@ header{
     display: flex;
     font-size: 15px;
 }
-.nav-item{
+.nav-item, a.nav-item{
     padding-top: 15px;
     padding-bottom: 14px;
     padding-left: 20px;
     padding-right: 20px;
     text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    text-decoration: none!important;
 }
 
-.nav-item:hover{
+a.nav-item:hover, .nav-item:hover{
     background-color: rgb(204, 204, 204);
-    color: black;
+    color: black!important;
+    text-decoration: none!important;
 }
 
 .more .fa-caret-down{
@@ -54,20 +59,25 @@ header{
     font-size: 15px;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
 }
-.more-item > div{
+
+.more-item a{
+    display: block;
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: black;
+    text-decoration: none;
 }
 
 .more:hover .more-item{
     display: inline-block;
 }
 
-.more-item  div:hover{
+.more-item  a:hover{
     background-color: rgb(204, 204, 204);
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
 .nav-search{

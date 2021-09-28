@@ -1,4 +1,8 @@
 @media (min-width: 1024px){
+    .menu-items, .hiden{
+        display: none;
+    }
+
     html, body{
         margin: 0;
         padding: 0;
@@ -431,6 +435,9 @@
 }
 
 @media (max-width: 1024px) and (min-width: 724px){
+    .menu-items, .hiden{
+        display: none;
+    }
     html{
         font-size: 15px;
         line-height: 1.5;
@@ -873,7 +880,7 @@
         z-index: 1;
     }
 
-    .nav-item.more, .nav-search, .nav-item.hiden-mobile, .hiden-mobile{
+    .nav-item.more, .nav-search, .nav-item.hiden-mobile, .hiden-mobile, .hiden{
         /* position: relative; */
         display: none;
     }
@@ -1009,7 +1016,7 @@
 
     .tickets-tours {
         padding: 32px 0;
-        margin: 0 auto;
+        /* margin: 0 16px; */
         width: 300px;
         height: auto;
     }

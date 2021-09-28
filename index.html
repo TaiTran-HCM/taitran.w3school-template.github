@@ -16,7 +16,7 @@
         <div class="nav">
             <nav class="nav-list">
                 <a href="#" class="nav-item">Home</a>
-                <div class="menu-items hiden-mobile">
+                <div class="menu-items hiden">
                     <a href="#band" class="nav-item">Band</a>
                     <a href="#tour" class="nav-item">Tour</a>
                     <a href="#contact" class="nav-item ">Contact</a>
@@ -24,7 +24,7 @@
                 <a href="#band" class="nav-item hiden-mobile">Band</a>
                 <a href="#tour" class="nav-item hiden-mobile">Tour</a>
                 <a href="#contact" class="nav-item hiden-mobile">Contact</a>
-                <a href="#" class="nav-item menu">
+                <a href="#" class="nav-item menu hiden">
                     <i class="fa fa-bars"></i>
                 </a>
                 <div class="nav-search"><span class="glyphicon glyphicon-search"></span></i></div>
@@ -215,11 +215,11 @@
 
     menuBnt.addEventListener('click', function(){
         const hiddenItem = menuItems.classList.value
-        if(hiddenItem == "menu-items hiden-mobile"){
-            menuItems.classList.remove('hiden-mobile')
+        if(hiddenItem == "menu-items hiden"){
+            menuItems.classList.remove('hiden')
         }
         else{
-            menuItems.classList.add('hiden-mobile')
+            menuItems.classList.add('hiden')
         }
     })
 

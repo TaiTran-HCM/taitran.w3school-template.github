@@ -16,18 +16,20 @@
         <div class="nav">
             <nav class="nav-list">
                 <a href="#" class="nav-item">Home</a>
-                <a href="#band" class="nav-item">Band</a>
-                <a href="#tour" class="nav-item">Tour</a>
-                <a href="#contact" class="nav-item">Contact</a>
-                <div class="nav-item more">
-                    More<i class="fa fa-caret-down"></i>
-                    <div class="more-item">
-                        <a href="#">Merchandise</a>
-                        <a href="#">Extras</a>
-                        <a href="#">Media</a>
-                    </div>
+                <div class="menu-items hiden-mobile">
+                    <a href="#band" class="nav-item">Band</a>
+                    <a href="#tour" class="nav-item">Tour</a>
+                    <a href="#contact" class="nav-item ">Contact</a>
                 </div>
+                <a href="#band" class="nav-item hiden-mobile">Band</a>
+                <a href="#tour" class="nav-item hiden-mobile">Tour</a>
+                <a href="#contact" class="nav-item hiden-mobile">Contact</a>
+                <a href="#" class="nav-item menu">
+                    <i class="fa fa-bars"></i>
+                </a>
                 <div class="nav-search"><span class="glyphicon glyphicon-search"></span></i></div>
+            </nav>
+                
             </nav>
         </div>
     </header>
@@ -35,21 +37,21 @@
         <div id="slider">
             <div class="image-slider">
                 <img src="https://www.w3schools.com/w3images/la.jpg" alt="LA Band">
-                <div class="figcaption">
+                <div class="figcaption hiden-mobile">
                     <h3>Los Angeles</h3>
                     <p>We had the best time playing at Venice Beach!</p>
                 </div>
             </div>
             <div class="image-slider" hidden>
                 <img src="https://www.w3schools.com/w3images/ny.jpg" alt="NY Band">
-                <div class="figcaption">
+                <div class="figcaption hiden-mobile">
                     <h3>New York</h3>
                     <p>The atmosphere in New York is lorem ipsum.</p>
                 </div>
             </div>
             <div class="image-slider" hidden>
                 <img src="https://www.w3schools.com/w3images/chicago.jpg" alt="Chicago Band">
-                <div class="figcaption">
+                <div class="figcaption hiden-mobile">
                     <h3>Chicago</h3>
                     <p>Thank you, Chicago - A night we won't forget.</p>
                 </div>
@@ -189,6 +191,8 @@
     const buyBtns = document.querySelectorAll('.js-buy-tickets')
     const modal = document.querySelector('.modal')
     const modalForm = document.querySelector('.modal-form')
+    const menuItems = document.querySelector('.menu-items')
+    const menuBnt = document.querySelector('.menu')
 
     function showBuyTickets() {
         modal.classList.add('open-modal')
@@ -208,6 +212,18 @@
     modalForm.addEventListener('click', function (event) {
         event.stopPropagation()
     })
+
+    menuBnt.addEventListener('click', function(){
+        const hiddenItem = menuItems.classList.value
+        if(hiddenItem == "menu-items hiden-mobile"){
+            menuItems.classList.remove('hiden-mobile')
+        }
+        else{
+            menuItems.classList.add('hiden-mobile')
+        }
+    })
+
+
 
 </script>
 
